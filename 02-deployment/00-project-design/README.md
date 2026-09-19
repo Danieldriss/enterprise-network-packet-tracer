@@ -1,199 +1,199 @@
-# NexaCorp - Initial Network Design
+# NexaCorp - Diseño Inicial de la Red
 
-## 1. Project Overview
+## 1. Descripción General del Proyecto
 
-NexaCorp is a fictional technology company used to design and implement a complete enterprise network infrastructure in Cisco Packet Tracer.
+NexaCorp es una empresa tecnológica ficticia utilizada para diseñar e implementar una infraestructura de red empresarial completa en Cisco Packet Tracer.
 
-The main objective of this project is to learn networking concepts progressively, from basic network fundamentals to more advanced enterprise technologies, while documenting the complete design, implementation, verification, and troubleshooting process.
+El objetivo principal de este proyecto es aprender conceptos de redes de forma progresiva, comenzando por los fundamentos básicos y avanzando hacia tecnologías empresariales más complejas, mientras se documenta todo el proceso de diseño, implementación, verificación y resolución de problemas.
 
-The network will be designed with scalability, segmentation, security, availability, and centralized management in mind.
+La red será diseñada teniendo en cuenta la escalabilidad, segmentación, seguridad, disponibilidad y administración centralizada.
 
 ---
 
-## 2. Company Locations
+## 2. Sedes de la Empresa
 
-NexaCorp has approximately 320 employees distributed across three locations:
+NexaCorp cuenta con aproximadamente 320 empleados distribuidos entre tres sedes:
 
-| Location | Type | Employees |
+| Ubicación | Tipo | Empleados |
 |---|---|---:|
-| Málaga | Headquarters (HQ) | 200 |
-| Madrid | Branch Office 01 | 80 |
-| Sevilla | Branch Office 02 | 40 |
+| Málaga | Sede principal (HQ) | 200 |
+| Madrid | Sucursal 01 | 80 |
+| Sevilla | Sucursal 02 | 40 |
 | **Total** | | **320** |
 
 ---
 
-## 3. Málaga Headquarters
+## 3. Sede Principal de Málaga
 
-Málaga is the main NexaCorp headquarters and contains the largest number of users and most of the company's central infrastructure.
+Málaga es la sede principal de NexaCorp y concentra el mayor número de usuarios y la mayor parte de la infraestructura central de la empresa.
 
-### Departments
+### Departamentos
 
-| Department | Employees |
+| Departamento | Empleados |
 |---|---:|
-| Management | 10 |
-| Administration | 20 |
-| Finance | 20 |
-| Human Resources | 15 |
-| Sales | 50 |
-| Development | 60 |
-| IT / Systems | 25 |
+| Dirección | 10 |
+| Administración | 20 |
+| Finanzas | 20 |
+| Recursos Humanos | 15 |
+| Ventas | 50 |
+| Desarrollo | 60 |
+| IT / Sistemas | 25 |
 | **Total** | **200** |
 
-In addition to employee devices, the headquarters will contain network infrastructure and services such as:
+Además de los dispositivos de los empleados, la sede principal contará con infraestructura y servicios de red como:
 
-- Servers
-- Network printers
-- IP phones
-- Wireless access points
+- Servidores
+- Impresoras de red
+- Teléfonos IP
+- Puntos de acceso inalámbricos
 - Switches
 - Routers
 - Firewall
-- Network management devices
-- Corporate WiFi
-- Guest WiFi
-- Internal server network
+- Dispositivos de administración de red
+- WiFi corporativo
+- WiFi para invitados
+- Red interna de servidores
 - DMZ
 
 ---
 
-## 4. Madrid Branch Office
+## 4. Sucursal de Madrid
 
-Madrid is NexaCorp's largest branch office, with approximately 80 employees. It has its own local network infrastructure while maintaining connectivity with the Málaga headquarters.
+Madrid es la sucursal más grande de NexaCorp, con aproximadamente 80 empleados. Cuenta con su propia infraestructura de red local y mantiene conectividad con la sede principal de Málaga.
 
-### Departments
+### Departamentos
 
-| Department | Employees |
+| Departamento | Empleados |
 |---|---:|
-| Administration | 10 |
-| Sales | 35 |
-| IT / Support | 10 |
-| Operations | 25 |
+| Administración | 10 |
+| Ventas | 35 |
+| IT / Soporte | 10 |
+| Operaciones | 25 |
 | **Total** | **80** |
 
-The Madrid branch will include:
+La sucursal de Madrid contará con:
 
-- Employee computers and laptops
-- Network printers
-- IP phones
-- Wireless access points
-- Corporate WiFi
-- Guest WiFi
+- Ordenadores y portátiles de empleados
+- Impresoras de red
+- Teléfonos IP
+- Puntos de acceso inalámbricos
+- WiFi corporativo
+- WiFi para invitados
 - Switches
 - Router
-- Network management devices
+- Dispositivos de administración de red
 
 ---
 
-## 5. Sevilla Branch Office
+## 5. Sucursal de Sevilla
 
-Sevilla is NexaCorp's smallest branch office, with approximately 40 employees. Its network infrastructure will be simpler than Málaga and Madrid while still providing the necessary corporate services and connectivity.
+Sevilla es la sucursal más pequeña de NexaCorp, con aproximadamente 40 empleados. Su infraestructura de red será más sencilla que la de Málaga y Madrid, pero seguirá proporcionando los servicios corporativos y la conectividad necesarios.
 
-### Departments
+### Departamentos
 
-| Department | Employees |
+| Departamento | Empleados |
 |---|---:|
-| Administration | 5 |
-| Sales | 20 |
-| Operations | 10 |
-| IT / Support | 5 |
+| Administración | 5 |
+| Ventas | 20 |
+| Operaciones | 10 |
+| IT / Soporte | 5 |
 | **Total** | **40** |
 
-The Sevilla branch will include:
+La sucursal de Sevilla contará con:
 
-- Employee computers and laptops
-- Network printers
-- IP phones
-- Wireless access points
-- Corporate WiFi
+- Ordenadores y portátiles de empleados
+- Impresoras de red
+- Teléfonos IP
+- Puntos de acceso inalámbricos
+- WiFi corporativo
 - Switches
 - Router
 
 ---
 
-## 6. Network Requirements
+## 6. Requisitos de Red
 
-The NexaCorp network must provide reliable and controlled connectivity between users, departments, services, branch offices, and the Internet.
+La red de NexaCorp debe proporcionar conectividad fiable y controlada entre usuarios, departamentos, servicios, sucursales e Internet.
 
-The main network requirements are:
+Los principales requisitos de red son:
 
-- All corporate users must have access to the Internet.
-- Devices must automatically receive the appropriate network configuration whenever possible.
-- Different departments must be logically separated from each other.
-- Communication between different network segments must be controlled.
-- Málaga, Madrid, and Sevilla must be able to communicate through the corporate network.
-- Users from branch offices must be able to access authorized services located at the Málaga headquarters.
-- Internal servers must be separated from regular user networks.
-- Public-facing services must be separated from the internal corporate network.
-- Corporate WiFi and Guest WiFi must operate as separate networks.
-- Guest users must have Internet access but must not be able to access the internal corporate network.
-- IP phones must be logically separated from regular user devices.
-- Network devices must have a dedicated management network.
-- IT administrators must be able to remotely manage network infrastructure securely.
-- The network must support centralized services such as DNS, DHCP, NTP, AAA, and Syslog.
-- The network must be designed so that new users, departments, devices, and branch offices can be added in the future.
-
----
-
-## 7. Security Requirements
-
-The NexaCorp network must protect internal resources and restrict access according to the type of user, device, and network segment.
-
-The main security requirements are:
-
-- Guest users must not be able to access any internal corporate network.
-- Only authorized users and departments should be able to access sensitive internal services.
-- The IT department must have secure administrative access to network devices.
-- Management access to routers and switches must not be available from regular user networks.
-- Network devices must use secure remote management methods.
-- User networks, server networks, management networks, voice networks, and guest networks must remain logically separated.
-- Access between different network segments must follow the principle of least privilege.
-- Unauthorized devices should be restricted from connecting to access ports whenever possible.
-- The network must include protection against common Layer 2 attacks and misconfigurations.
-- Public-facing services must be isolated from the internal corporate network.
-- Network events and relevant security information should be centrally logged when possible.
+- Todos los usuarios corporativos deben disponer de acceso a Internet.
+- Los dispositivos deben recibir automáticamente la configuración de red correspondiente siempre que sea posible.
+- Los diferentes departamentos deben estar separados lógicamente entre sí.
+- La comunicación entre los diferentes segmentos de red debe estar controlada.
+- Málaga, Madrid y Sevilla deben poder comunicarse a través de la red corporativa.
+- Los usuarios de las sucursales deben poder acceder a los servicios autorizados ubicados en la sede principal de Málaga.
+- Los servidores internos deben estar separados de las redes de usuarios.
+- Los servicios accesibles públicamente deben estar separados de la red corporativa interna.
+- El WiFi corporativo y el WiFi para invitados deben funcionar como redes independientes.
+- Los usuarios invitados deben disponer de acceso a Internet, pero no deben poder acceder a la red corporativa interna.
+- Los teléfonos IP deben estar separados lógicamente de los dispositivos de usuario convencionales.
+- Los dispositivos de red deben disponer de una red dedicada para su administración.
+- Los administradores de IT deben poder administrar remotamente la infraestructura de red de forma segura.
+- La red debe soportar servicios centralizados como DNS, DHCP, NTP, AAA y Syslog.
+- La red debe estar diseñada para permitir la incorporación futura de nuevos usuarios, departamentos, dispositivos y sucursales.
 
 ---
 
-## 8. Scalability and Availability Requirements
+## 7. Requisitos de Seguridad
 
-The NexaCorp network must be designed to support future growth while minimizing service interruptions caused by network failures.
+La red de NexaCorp debe proteger los recursos internos y restringir el acceso en función del tipo de usuario, dispositivo y segmento de red.
 
-The main scalability and availability requirements are:
+Los principales requisitos de seguridad son:
 
-- The network must allow new users and devices to be added without requiring a complete redesign.
-- New departments and network segments should be easy to integrate.
-- The IP addressing scheme must reserve enough capacity for future growth.
-- Additional branch offices should be able to connect to the corporate network in the future.
-- The Málaga headquarters must avoid critical single points of failure whenever possible.
-- Critical network connections should provide redundancy.
-- The network should remain operational whenever an alternative path is available after a link failure.
-- Critical network devices should use redundant designs where appropriate.
-- The routing infrastructure must be capable of adapting to network topology changes.
-- The design must remain manageable as the network grows.
+- Los usuarios invitados no deben poder acceder a ninguna red corporativa interna.
+- Solo los usuarios y departamentos autorizados deben poder acceder a servicios internos sensibles.
+- El departamento de IT debe disponer de acceso administrativo seguro a los dispositivos de red.
+- El acceso de administración a routers y switches no debe estar disponible desde las redes de usuarios convencionales.
+- Los dispositivos de red deben utilizar métodos seguros de administración remota.
+- Las redes de usuarios, servidores, administración, telefonía e invitados deben permanecer separadas lógicamente.
+- El acceso entre los diferentes segmentos de red debe seguir el principio de mínimo privilegio.
+- Siempre que sea posible, se debe restringir la conexión de dispositivos no autorizados a los puertos de acceso.
+- La red debe incluir protección frente a ataques comunes de Capa 2 y errores de configuración.
+- Los servicios accesibles públicamente deben estar aislados de la red corporativa interna.
+- Los eventos de red y la información relevante de seguridad deben registrarse de forma centralizada siempre que sea posible.
 
 ---
 
-## 9. Initial Network Objectives
+## 8. Requisitos de Escalabilidad y Disponibilidad
 
-Based on the company scenario and requirements defined above, the NexaCorp network will be designed and implemented progressively.
+La red de NexaCorp debe estar diseñada para soportar el crecimiento futuro de la empresa y minimizar las interrupciones del servicio provocadas por fallos de red.
 
-The main objectives of the project are:
+Los principales requisitos de escalabilidad y disponibilidad son:
 
-- Design a structured and scalable enterprise network.
-- Create an efficient IP addressing plan for all locations and network segments.
-- Segment the network according to departments, services, and device types.
-- Provide controlled communication between different network segments.
-- Establish connectivity between Málaga, Madrid, and Sevilla.
-- Provide centralized network services for corporate users.
-- Provide secure Internet connectivity.
-- Separate internal, public, guest, voice, server, and management networks.
-- Implement secure management of network infrastructure.
-- Introduce redundancy and high availability for critical infrastructure.
-- Implement network monitoring and centralized logging.
-- Apply security mechanisms at different layers of the network.
-- Test and verify every implemented technology.
-- Create troubleshooting scenarios to understand common network failures.
-- Document the complete design, configuration, verification, and troubleshooting process.
+- La red debe permitir añadir nuevos usuarios y dispositivos sin necesidad de realizar un rediseño completo.
+- Debe ser sencillo integrar nuevos departamentos y segmentos de red.
+- El esquema de direccionamiento IP debe reservar suficiente capacidad para el crecimiento futuro.
+- En el futuro debe ser posible conectar nuevas sucursales a la red corporativa.
+- La sede principal de Málaga debe evitar puntos únicos de fallo críticos siempre que sea posible.
+- Las conexiones de red críticas deben disponer de redundancia.
+- La red debe permanecer operativa cuando exista una ruta alternativa disponible tras el fallo de un enlace.
+- Los dispositivos de red críticos deben utilizar diseños redundantes cuando sea necesario.
+- La infraestructura de routing debe ser capaz de adaptarse a cambios en la topología de red.
+- El diseño debe continuar siendo administrable a medida que la red crezca.
 
-The infrastructure will be built progressively in Cisco Packet Tracer. Each stage will introduce new networking concepts only after the necessary theoretical foundations have been studied and documented.
+---
+
+## 9. Objetivos Iniciales de la Red
+
+A partir del escenario de la empresa y los requisitos definidos anteriormente, la red de NexaCorp será diseñada e implementada progresivamente.
+
+Los principales objetivos del proyecto son:
+
+- Diseñar una red empresarial estructurada y escalable.
+- Crear un plan de direccionamiento IP eficiente para todas las sedes y segmentos de red.
+- Segmentar la red según departamentos, servicios y tipos de dispositivos.
+- Proporcionar comunicación controlada entre los diferentes segmentos de red.
+- Establecer conectividad entre Málaga, Madrid y Sevilla.
+- Proporcionar servicios de red centralizados para los usuarios corporativos.
+- Proporcionar conectividad segura a Internet.
+- Separar las redes internas, públicas, de invitados, telefonía, servidores y administración.
+- Implementar una administración segura de la infraestructura de red.
+- Introducir redundancia y alta disponibilidad para la infraestructura crítica.
+- Implementar monitorización de red y registro centralizado de eventos.
+- Aplicar mecanismos de seguridad en diferentes capas de la red.
+- Probar y verificar cada tecnología implementada.
+- Crear escenarios de resolución de problemas para comprender fallos comunes de red.
+- Documentar todo el proceso de diseño, configuración, verificación y resolución de problemas.
+
+La infraestructura será construida progresivamente en Cisco Packet Tracer. Cada etapa introducirá nuevos conceptos de redes únicamente después de haber estudiado y documentado las bases teóricas necesarias.
